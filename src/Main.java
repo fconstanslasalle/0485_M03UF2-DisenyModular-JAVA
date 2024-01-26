@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         //Aquí declaramos las instancias o variables que necesitaremos en nuestro programa
         Scanner leerteclado = new Scanner(System.in);
         int opcion =0;
