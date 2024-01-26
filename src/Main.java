@@ -16,8 +16,8 @@ public class Main {
         opcion= leerteclado.nextInt();
         do {
             switch (opcion) {
-                case 1 -> Sumardosnumeros(); //Llamamos a este método que su UNICA función será sumar dos números
-                case 2 -> Restardosnumeros();//Llamamos a este método que su ÚNICA función será restar dos números
+                case 1 -> SumarDosNumeros(); //Llamamos a este método que su UNICA función será sumar dos números
+                case 2 -> RestarDosNumeros();//Llamamos a este método que su ÚNICA función será restar dos números
                 case 3 -> MultiplicarDosNumeros(); //llamamos a este método que su ÚNICA función será multiplicar dos números
                 case 4 -> MensajeSalida();// Llamamos a este método que su ÚNICA función es mostrar un mensaje de salida.
                 default -> System.out.println("Opción no permitida, vuelvelo a intentar.");
@@ -47,12 +47,34 @@ public class Main {
         System.out.println("El resultado de las multiplicación es: "+ result );
     }
 
-    private static void Restardosnumeros() {
+    private static void RestarDosNumeros() {
+        //INICIO - DECLARACIÓN VARIBALES
+        int num1 =0;
+        int num2=0;
+        int result=0;
+        Scanner numeros = new Scanner(System.in); // Para poder guardar los valores que me pone el usuario por teclados
+        //FIN - DECLARACIÓN VARIABLES
+
+        System.out.println("Acabas de entrar en el método que restará dos valores y te dará el resultado");
+        System.out.println("Introduce el PRIMER número entero");
+        num1 = numeros.nextInt();
+        System.out.println("Introduce el SEGUNDO número entero ");
+        num2= numeros.nextInt();
+        result = Calculadora.Restar(num1,num2); /*Llamo al método "Restar" que se encuentra en la classe "Calculador"
+        A este método se le tienen que pasar dos PARAMETROS y nos DEVUELVE un INT*/
+        System.out.println("El resultado de las multiplicación es: "+ result );
+
+
     }
-        //Aqui tendria que ir el codigo par restar dos numeros
-    private static void Sumardosnumeros() {
+
+    private static void SumarDosNumeros() {
+        int a=2;
+        int b=3;
+        int resultat=0;
+
+        resultat=Calculadora.Sumar(a,b);
     }
-        //Aquí tendria que ir codigo para poder sumar dos números
+
     private static void MenuUsuario() {
         /*La única función de este método es escribir por pantalla el
         menú con las diferentes opciones a escoger por el usuario
