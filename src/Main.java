@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        AC3_MaquinaDeBillets.main();
 
+        /**
         //Aquí declaramos las instancias o variables que necesitaremos en nuestro programa
         Scanner leerteclado = new Scanner(System.in);
         int opcion =0;
@@ -20,12 +22,13 @@ public class Main {
                 case 1 -> SumarDosNumeros(); //Llamamos a este método que su UNICA función será sumar dos números
                 case 2 -> RestarDosNumeros();//Llamamos a este método que su ÚNICA función será restar dos números
                 case 3 -> MultiplicarDosNumeros(); //llamamos a este método que su ÚNICA función será multiplicar dos números
-                case 4 -> MensajeSalida();// Llamamos a este método que su ÚNICA función es mostrar un mensaje de salida.
+                case 4 -> MensajeSalida();
+                // Llamamos a este método que su ÚNICA función es mostrar un mensaje de salida.
                 default -> System.out.println("Opción no permitida, vuelvelo a intentar.");
             }
             MenuUsuario();
             opcion= leerteclado.nextInt();
-        }while(opcion!=4);
+        }while(opcion!=4);*/
     }
     private static void MensajeSalida() {
         System.out.println("Gracias por utilizar nuestro programa de muestra sobre Programación Modular");
