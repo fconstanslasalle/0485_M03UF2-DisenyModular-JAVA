@@ -18,22 +18,23 @@ public class AC3_MaquinaDeBillets {
                 Billets[NumBillets][1]= NumeroDeZona;
                 NumBillets=NumBillets+1;
 
-            }while((NumBillets<2)||(!ModeManteniment));
+            }while(NumBillets<3);
+          ImprimirTicket(Billets);
+          NumBillets=0;
         }
-
-        ImprimirTicket(Billets);
-
+        
     }
 
     private static void ImprimirTicket(int[][] billets) {
         Scanner LlegirResposta = new Scanner(System.in);
-        String Resposta=null;
+        String Resposta="";
         double ImportTotal=0.0f;
 
         System.out.println("Vols imprimir ticket?");
+        Resposta=LlegirResposta.next();
         if(Resposta.equals("Si")){
             ImportTotal=CalcularImportTotal(billets);
-            System.out.println("El import total de la venta dels teus billets es"+ImportTotal);
+            System.out.println("El import total de la venta dels teus billets es: "+ImportTotal);
         }
         else{
             System.out.println("Compra finalitzada correctament. Tornant al menú principal");
@@ -103,7 +104,7 @@ public class AC3_MaquinaDeBillets {
     private static int DemanarZona(int NumBillets) {
         int NumeroZona=0;
         Scanner LlegirZona= new Scanner(System.in);
-        System.out.println("Si us plau, introdueix la zona del billet"+NumBillets);
+        System.out.println("Si us plau, introdueix la zona del billet:"+NumBillets);
         NumeroZona=LlegirZona.nextInt();
         if (NumeroZona==4321){
             ModeManteniment=true;
